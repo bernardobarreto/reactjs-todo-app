@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import SubmitForm from './components/submit_form'
-import { useState, useEffect } from 'react'
+import SubmitForm from './components/submit_form';
+import List from './components/list';
+import { useState } from 'react';
 
 function App() {
   const [list, setList] = useState([]);
@@ -9,11 +10,7 @@ function App() {
   return (
     <div className="App">
       <SubmitForm list={list} setList={setList} />
-      <ul>
-      { list.map((item, index) => (
-        <li key={index}>{item}</li>
-      )) }
-    </ul>
+      <List list={list} setList={setList}></List>
     </div>
   );
 }
