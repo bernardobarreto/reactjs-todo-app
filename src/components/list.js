@@ -1,4 +1,4 @@
-import React from 'react';
+import TaskItem from './task_item.js'
 
 function List({
   list,
@@ -7,7 +7,7 @@ function List({
   return (
     <ul>
       { list.map((item, index) => (
-        <li key={index}>{item}</li>
+        <TaskItem item={item} key={index} index={index} list={list} setList={setList} />
       )) }
     </ul>
   )
